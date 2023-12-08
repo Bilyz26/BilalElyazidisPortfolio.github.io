@@ -1,0 +1,135 @@
+header {
+    width: 100vw;
+    height: 100px;
+    background-color: #121212;
+}
+
+
+/* background decoration */
+header aside {
+    width: 100vw;
+    height: 540px;
+    position: absolute;
+}
+
+
+header aside #blured-items span:nth-child(4) {
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background-color: #121212;
+    top: 20px;
+    left: 100px;
+    border-radius: 50% 39%;
+}
+
+#svgElements {
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    height: 540px;
+    width: 100%;
+
+    filter: url(#blurFilter);
+    transform: translate(150px, 150px) scale();
+}
+
+#noise {
+    background-image: url(noisePy.png);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 150px;
+}
+
+
+/*==========   nav    =============*/
+
+header nav {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff6de;
+}
+
+
+
+header nav #brand #logo {
+    font-family: 'Caprasimo', cursive;
+    font-size: 35px;
+    position: relative;
+}
+
+header nav #menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav #quick-contact {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    width: 170px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 45px;
+    border-radius: 40px;
+    background-color: bisque;
+    color: #121212;
+}
+
+
+
+/*==========   nav  > menu > page indicators class utilities   =============*/
+
+.menuCurrentPage::before {
+    content: '';
+    width: 20px;
+    display: block;
+    height: 2px;
+    position: relative;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    background-color: aqua;
+}
+
+/*==========   hero   =============*/
+
+strong {
+    position: relative;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+strong::after {
+    content: "";
+    position: absolute;
+    bottom: -0.125rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 0.75rem;
+    z-index: -1;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
